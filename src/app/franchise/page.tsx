@@ -72,9 +72,9 @@ export default function FranchisePage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-teal-700 via-teal-600 to-teal-800 py-16">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-600 font-cta">Start Your Junk Removal Business Today</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-200 font-cta">Start Your Junk Removal Business Today</p>
           <h2 className="text-center text-3xl font-bold text-white sm:text-4xl font-heading">Interested? Let&apos;s Talk.</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-slate-600">Email us to request our franchise information packet and schedule a discovery call. You can also <Link href="/contact-we-pay-you-junk-removal-today" className="text-teal-700 font-semibold hover:underline">reach our team online</Link>, browse our <Link href="/services" className="text-teal-700 font-semibold hover:underline">full service menu</Link>, or learn more about the <Link href="/about" className="text-teal-700 font-semibold hover:underline">We Pay You story</Link>.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/70">Email us to request our franchise information packet and schedule a discovery call. You can also <Link href="/contact-we-pay-you-junk-removal-today" className="text-teal-200 font-semibold hover:underline">reach our team online</Link>, browse our <Link href="/services" className="text-teal-200 font-semibold hover:underline">full service menu</Link>, or learn more about the <Link href="/about" className="text-teal-200 font-semibold hover:underline">We Pay You story</Link>.</p>
           <div className="mt-8">
             <a href={`mailto:${EMAIL}?subject=Franchise Inquiry`}><span className="inline-block rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-teal-700 shadow-lg transition-colors hover:bg-teal-50 font-cta">Email {EMAIL}</span></a>
           </div>

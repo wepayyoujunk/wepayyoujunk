@@ -78,9 +78,9 @@ export default function BlogPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-teal-700 via-teal-600 to-teal-800 py-16">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-600 font-cta">Book Affordable Junk Removal Near You</p>
-          <h2 className="text-center text-3xl font-bold text-white sm:text-4xl font-heading">Don&apos;t Wait for the Blog</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-slate-600">Skip the reading and <Link href="/book-junk-removal-service-today" className="text-teal-700 font-semibold hover:underline">schedule your junk removal pickup</Link> right now. Check our <Link href="/pricing" className="text-teal-700 font-semibold hover:underline">simple hourly pricing</Link>, explore every <Link href="/services" className="text-teal-700 font-semibold hover:underline">service we offer</Link>, or find a <Link href="/locations" className="text-teal-700 font-semibold hover:underline">We Pay You office near you</Link>.</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-200 font-cta">Book Affordable Junk Removal Near You</p>
+          <h2 className="mt-3 text-center text-3xl font-bold text-white sm:text-4xl font-heading">Don&apos;t Wait for the Blog</h2>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/70">Skip the reading and <Link href="/book-junk-removal-service-today" className="text-teal-200 font-semibold hover:underline">schedule your junk removal pickup</Link> right now. Check our <Link href="/pricing" className="text-teal-200 font-semibold hover:underline">simple hourly pricing</Link>, explore every <Link href="/services" className="text-teal-200 font-semibold hover:underline">service we offer</Link>, or find a <Link href="/locations" className="text-teal-200 font-semibold hover:underline">We Pay You office near you</Link>.</p>
           <CtaButtons variant="dark" />
         </div>
       </section>

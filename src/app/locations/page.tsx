@@ -111,9 +111,9 @@ export default function LocationsPage() {
       <section className="relative overflow-hidden bg-gradient-to-br from-teal-700 via-teal-600 to-teal-800 py-16">
         <div className="absolute inset-0 grid-bg opacity-30" />
         <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-600 font-cta">Junk Removal Service Expanding Nationwide</p>
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-200 font-cta">Junk Removal Service Expanding Nationwide</p>
           <h2 className="text-center text-3xl font-bold text-white sm:text-4xl font-heading">Don&apos;t See Your City?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-slate-600">We are expanding every week and chances are we already have a crew in your area. <Link href="/contact-we-pay-you-junk-removal-today" className="text-teal-700 font-semibold hover:underline">Send us a message</Link>, check our <Link href="/faq" className="text-teal-700 font-semibold hover:underline">FAQ for coverage questions</Link>, or explore <Link href="/franchise" className="text-teal-700 font-semibold hover:underline">franchise opportunities</Link> to bring We Pay You to your market.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/70">We are expanding every week and chances are we already have a crew in your area. <Link href="/contact-we-pay-you-junk-removal-today" className="text-teal-200 font-semibold hover:underline">Send us a message</Link>, check our <Link href="/faq" className="text-teal-200 font-semibold hover:underline">FAQ for coverage questions</Link>, or explore <Link href="/franchise" className="text-teal-200 font-semibold hover:underline">franchise opportunities</Link> to bring We Pay You to your market.</p>
           <div className="mt-8">
             <a href={PHONE_HREF}><span className="inline-block rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-teal-700 shadow-lg transition-colors hover:bg-teal-50 font-cta">Call {PHONE}</span></a>
           </div>
