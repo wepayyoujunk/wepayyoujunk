@@ -7,15 +7,22 @@ export function AudioReader({ contentId }: { contentId: string }) {
   const [currentIndex, setCurrentIndex] = useState(-1);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
   const paragraphsRef = useRef<HTMLElement[]>([]);
+  const stoppedRef = useRef(false);
 
   useEffect(() => {
     return () => {
+      stoppedRef.current = true;
       window.speechSynthesis?.cancel();
     };
   }, []);
 
   const stop = useCallback(() => {
+    stoppedRef.current = true;
     window.speechSynthesis.cancel();
+    if (utteranceRef.current) {
+      utteranceRef.current.onend = null;
+      utteranceRef.current.onerror = null;
+    }
     setPlaying(false);
     setCurrentIndex(-1);
     paragraphsRef.current.forEach((el) => {
@@ -32,6 +39,9 @@ export function AudioReader({ contentId }: { contentId: string }) {
       return;
     }
 
+    // Reset stopped flag
+    stoppedRef.current = false;
+
     if (playing) {
       stop();
       return;
@@ -47,16 +57,39 @@ export function AudioReader({ contentId }: { contentId: string }) {
 
     setPlaying(true);
 
-    // Get a natural-sounding voice
+    // Pick the most human-sounding voice available
+    // macOS "Premium" / "Enhanced" voices sound natural
+    // Chrome has "Google US English" which is decent
+    // iOS/Safari has high-quality Siri voices
     const voices = window.speechSynthesis.getVoices();
-    const preferred = voices.find(
-      (v) => v.lang.startsWith("en") && (v.name.includes("Samantha") || v.name.includes("Karen") || v.name.includes("Daniel") || v.name.includes("Google") || v.name.includes("Natural"))
-    ) || voices.find((v) => v.lang.startsWith("en-US")) || voices[0];
+    const naturalNames = [
+      "Zoe (Premium)", "Zoe (Enhanced)", "Zoe",
+      "Ava (Premium)", "Ava (Enhanced)", "Ava",
+      "Samantha (Enhanced)", "Samantha",
+      "Alex", "Allison (Enhanced)", "Allison",
+      "Tom (Enhanced)", "Tom",
+      "Google US English",
+      "Microsoft Zira",
+      "Microsoft David",
+    ];
+    let preferred: SpeechSynthesisVoice | null | undefined = null;
+    for (const name of naturalNames) {
+      const found = voices.find((v) => v.name === name && v.lang.startsWith("en"));
+      if (found) { preferred = found; break; }
+    }
+    // Fallback: any English voice with "Premium" or "Enhanced" in the name
+    if (!preferred) {
+      preferred = voices.find((v) => v.lang.startsWith("en") && (v.name.includes("Premium") || v.name.includes("Enhanced")));
+    }
+    // Final fallback: first English voice
+    if (!preferred) {
+      preferred = voices.find((v) => v.lang.startsWith("en-US")) || voices.find((v) => v.lang.startsWith("en")) || voices[0];
+    }
 
     let index = 0;
 
     function speakNext() {
-      if (index >= paragraphs.length) {
+      if (stoppedRef.current || index >= paragraphs.length) {
         stop();
         return;
       }
@@ -90,13 +123,11 @@ export function AudioReader({ contentId }: { contentId: string }) {
       if (preferred) utterance.voice = preferred;
 
       utterance.onend = () => {
-        index++;
-        speakNext();
+        if (!stoppedRef.current) { index++; speakNext(); }
       };
 
       utterance.onerror = () => {
-        index++;
-        speakNext();
+        if (!stoppedRef.current) { index++; speakNext(); }
       };
 
       utteranceRef.current = utterance;
