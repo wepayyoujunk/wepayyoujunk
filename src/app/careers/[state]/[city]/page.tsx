@@ -7,6 +7,7 @@ import { SERVICES } from "@/data/services";
 import { getOfficeByState } from "@/data/offices";
 import { OfficeBlock } from "@/components/OfficeBlock";
 import { CtaButtons } from "@/components/CtaButtons";
+import { JobApplicationForm } from "@/components/JobApplicationForm";
 
 export function generateStaticParams() {
   return getAllCities().map(({ state, city }) => ({ state: state.slug, city: city.slug }));
@@ -114,18 +115,36 @@ export default async function CityJobsPage({ params }: { params: Promise<{ state
         </section>
       )}
 
-      <section className="relative overflow-hidden bg-gradient-to-br from-teal-700 via-teal-600 to-teal-800 py-16">
-        <div className="absolute inset-0 grid-bg opacity-30" />
-        <div className="relative mx-auto max-w-5xl px-6 text-center">
-          <p className="text-center text-sm font-semibold uppercase tracking-widest text-teal-200 font-cta">Apply for Junk Removal Jobs in {city.name} Today</p>
-          <h2 className="mt-3 text-center text-3xl font-bold text-white sm:text-4xl font-heading">Ready to Join the {city.name} Team?</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-base text-white/70">
-            Email your name, city, and a brief note about your experience.
-          </p>
-          <div className="mt-8">
-            <a href={`mailto:${EMAIL}?subject=Job Application — ${city.name}, ${state.abbreviation}`}>
-              <span className="inline-block rounded-lg bg-white px-8 py-3.5 text-base font-semibold text-teal-700 shadow-lg transition-colors hover:bg-teal-50 font-cta">Apply Now — Email Us</span>
-            </a>
+      {/* Application form */}
+      <section className="bg-section-teal py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-teal-600 font-cta">Apply for $50/hr Junk Removal Jobs in {city.name}</p>
+              <h2 className="mt-3 text-3xl font-bold text-slate-900 font-heading">Apply Now — {city.name}, {state.abbreviation}</h2>
+              <p className="mt-4 text-base text-slate-600">Fill out the form and we&apos;ll call you within 48 hours.</p>
+              <div className="mt-6 space-y-3">
+                <div className="rounded-lg bg-white border border-slate-200 p-4">
+                  <p className="text-2xl font-bold text-teal-700 font-heading">$50/hr</p>
+                  <p className="text-sm text-slate-600">Starting pay — no experience required</p>
+                </div>
+                <div className="rounded-lg bg-white border border-slate-200 p-4">
+                  <p className="text-2xl font-bold text-teal-700 font-heading">$50–$150/day tips</p>
+                  <p className="text-sm text-slate-600">On top of hourly pay</p>
+                </div>
+                <div className="mt-4 space-y-2 text-sm text-slate-600">
+                  <p>✓ Valid driver&apos;s license &amp; clean record</p>
+                  <p>✓ Lift 50+ lbs repeatedly</p>
+                  <p>✓ Smartphone with data plan</p>
+                  <p>✓ Pass background check</p>
+                  <p>✓ 18+ years old</p>
+                  <p>✓ Available weekends</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <JobApplicationForm city={city.name} state={state.abbreviation} />
+            </div>
           </div>
         </div>
       </section>
