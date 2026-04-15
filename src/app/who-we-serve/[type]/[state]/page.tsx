@@ -8,6 +8,7 @@ import { STATES, getStateBySlug } from "@/data/cities";
 import { getOfficeByState } from "@/data/offices";
 import { OfficeBlock } from "@/components/OfficeBlock";
 import { CtaButtons } from "@/components/CtaButtons";
+import { customerStateContent } from "@/data/customer-content";
 
 function isServiceSlug(slug: string) {
   return SERVICES.some((s) => s.slug === slug);
@@ -139,8 +140,9 @@ export default async function TypeStatePage({ params }: { params: Promise<{ type
             {state.cities.length} cities, same <Link href="/pricing" className="text-teal-700 font-semibold hover:underline">pricing</Link>, local crews. Browse <Link href={`/who-we-serve/${type}`} className="text-teal-700 font-semibold hover:underline">all {ct.shortName.toLowerCase()} services</Link> or <Link href="/book-junk-removal-service-today" className="text-teal-700 font-semibold hover:underline">book now</Link>.
           </p>
           <div className="mx-auto mt-8 max-w-3xl space-y-5 text-center text-base leading-relaxed text-slate-700">
-            <p>{ct.longDescription}</p>
-            <p>In {state.name}, our local crews know the {state.abbreviation} resale markets, recycling centers, and donation partners. {ct.creditHighlights[0]}. {ct.creditHighlights[1]}.</p>
+            {customerStateContent(ct, state.name, state.abbreviation, state.cities.length).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         </div>
       </section>

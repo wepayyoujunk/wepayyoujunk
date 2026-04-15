@@ -6,6 +6,7 @@ import { CUSTOMER_TYPES } from "@/data/customer-types";
 import { SERVICES } from "@/data/services";
 import { STATES } from "@/data/cities";
 import { CtaButtons } from "@/components/CtaButtons";
+import { customerTypeContent } from "@/data/customer-content";
 
 export function generateStaticParams() {
   return CUSTOMER_TYPES.map((ct) => ({ type: ct.slug }));
@@ -52,7 +53,9 @@ export default async function CustomerTypePage({ params }: { params: Promise<{ t
             See our <Link href="/pricing" className="text-teal-700 font-semibold hover:underline">transparent pricing</Link>, browse <Link href="/services" className="text-teal-700 font-semibold hover:underline">all 34 services</Link>, or <Link href="/book-junk-removal-service-today" className="text-teal-700 font-semibold hover:underline">book your pickup</Link> today.
           </p>
           <div className="mx-auto mt-8 max-w-3xl space-y-5 text-center text-base leading-relaxed text-slate-700">
-            <p>{ct.longDescription}</p>
+            {customerTypeContent(ct).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         </div>
       </section>

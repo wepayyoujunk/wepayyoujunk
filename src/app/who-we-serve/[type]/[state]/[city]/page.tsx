@@ -8,6 +8,7 @@ import { getAllCities, getCityBySlug } from "@/data/cities";
 import { getOfficeByState } from "@/data/offices";
 import { OfficeBlock } from "@/components/OfficeBlock";
 import { CtaButtons } from "@/components/CtaButtons";
+import { customerCityContent } from "@/data/customer-content";
 
 export function generateStaticParams() {
   const allCities = getAllCities();
@@ -65,8 +66,9 @@ export default async function TypeCityPage({ params }: { params: Promise<{ type:
             Local crew in {city.name}. Same <Link href="/pricing" className="text-teal-700 font-semibold hover:underline">pricing</Link>. Same credits. Browse <Link href={`/locations/${stateSlug}/${citySlug}`} className="text-teal-700 font-semibold hover:underline">all services in {city.name}</Link> or <Link href="/book-junk-removal-service-today" className="text-teal-700 font-semibold hover:underline">book now</Link>.
           </p>
           <div className="mx-auto mt-8 max-w-3xl space-y-5 text-center text-base leading-relaxed text-slate-700">
-            <p>{ct.longDescription}</p>
-            <p>In {city.name}, our local crew knows the {state.abbreviation} resale markets and can appraise your items accurately based on what sells in your area. {ct.creditHighlights[0]}. {ct.creditHighlights[1]}. {ct.creditHighlights[2] || ""}</p>
+            {customerCityContent(ct, city.name, state.name, state.abbreviation).map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
           </div>
         </div>
       </section>
