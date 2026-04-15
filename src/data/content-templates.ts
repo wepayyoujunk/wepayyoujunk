@@ -153,6 +153,21 @@ export function cityPageContent(cityName: string, stateName: string, stateAbbr: 
           `If same-day isn't necessary, you can book any date and time up to 4 weeks out. We offer 2-hour arrival windows for all scheduled appointments in ${cityName}. Weekend and holiday appointments are available at no extra charge. Evening appointments (after 5PM) are available by request for commercial customers who need after-hours service in ${cityName}.`,
         ],
       },
+      {
+        heading: `The Industry Secret Every ${cityName} Resident Should Know`,
+        paragraphs: [
+          `Here is what every junk removal company in ${cityName} hopes you never find out: they charge you $300-$800 to haul your items away, then sort through everything at their facility and resell 35% or more of your stuff for their own profit. That working refrigerator, your solid wood dining table, the power tools in the garage — they charged you to take these items and then flipped them for hundreds of dollars. You paid to give them free inventory. This is the standard model for 1-800-GOT-JUNK, Junk King, College Hunks, and every local hauler in ${cityName}. It has been this way for decades.`,
+          `We Pay You Junk Removal exists because this model is fundamentally unfair to ${cityName} residents. We charge a transparent hourly rate starting at $100/hr — you watch the clock, there is nothing to estimate or manipulate. We appraise your valuable items in front of you with real comparable sales data. And we credit you 50% (when applicable) of what they are worth. The same items that other ${cityName} companies profit from without sharing — we split the value with you 50/50. There is no trick, no fine print, no catch. Just a better model that ${cityName} residents are choosing every single day.`,
+          `The math always works in your favor in ${cityName}. In the best case, your credits exceed the bill and you walk away with a check. In the average case, you save 25-40% compared to flat-rate competitors. In the worst case — zero valuable items, all pure junk — our hourly rate is still competitive with volume-based pricing for the same amount of stuff. There is literally no scenario where calling the other guys saves you money in ${cityName}.`,
+        ],
+      },
+      {
+        heading: `Eco-Friendly Junk Removal in ${cityName}, ${stateAbbr}`,
+        paragraphs: [
+          `Choosing junk removal in ${cityName} is not just a financial decision — it is an environmental one. Traditional companies dump 70-80% of what they collect in ${stateAbbr} landfills, including perfectly functional items. When you choose us in ${cityName}, approximately 60% of your items are diverted from landfills through our resale, donation, and recycling network. Your working appliances go to ${stateAbbr} families who need affordable used appliances. Your quality furniture gets a second life in another ${cityName} home. Your electronics get properly recycled instead of leaching toxins into ${stateName} groundwater.`,
+          `We work with local ${cityName} and ${stateName} charities for donation, certified recycling facilities for metals and e-waste, and our national resale network for items with market value. Only items with truly zero remaining value in any category reach the landfill — and even then, we use licensed, environmentally compliant disposal facilities in ${stateAbbr}. When you book junk removal with us in ${cityName}, you are making the most environmentally responsible choice available.`,
+        ],
+      },
     ],
     nearbyCities,
   };
