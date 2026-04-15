@@ -75,10 +75,22 @@ export default async function CityServicePage({ params }: { params: Promise<{ st
         </section>
 
         {tips.sections.map((section, i) => (
-          <section key={i} className={i % 2 === 0 ? "bg-section-white py-16" : "bg-section-teal py-16"}>
+          <section key={`s${i}`} className={i % 2 === 0 ? "bg-section-white py-16" : "bg-section-teal py-16"}>
             <div className="mx-auto max-w-5xl px-6">
-              <h2 className="text-center text-3xl font-bold text-slate-900 font-heading">{section.heading}</h2>
-              <div className="mt-8 space-y-5 text-base leading-relaxed text-slate-700">
+              <h2 className="mt-3 text-center text-3xl font-bold text-slate-900 font-heading">{section.heading}</h2>
+              <div className="mx-auto mt-8 max-w-3xl space-y-5 text-center text-base leading-relaxed text-slate-700">
+                {section.paragraphs.map((p, j) => <p key={j}>{p}</p>)}
+              </div>
+            </div>
+          </section>
+        ))}
+
+        {/* Extended guide sections */}
+        {tips.extraSections.map((section, i) => (
+          <section key={`e${i}`} className={i % 2 === 0 ? "bg-section-teal py-16" : "bg-section-white py-16"}>
+            <div className="mx-auto max-w-5xl px-6">
+              <h2 className="mt-3 text-center text-3xl font-bold text-slate-900 font-heading">{section.heading}</h2>
+              <div className="mx-auto mt-8 max-w-3xl space-y-5 text-center text-base leading-relaxed text-slate-700">
                 {section.paragraphs.map((p, j) => <p key={j}>{p}</p>)}
               </div>
             </div>

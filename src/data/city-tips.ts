@@ -1,3 +1,5 @@
+import { PHONE } from "./content";
+
 /**
  * City-specific content generation for unique tips pages.
  * Each city gets different content based on regional factors.
@@ -147,6 +149,95 @@ export function generateCityTips(cityName: string, stateName: string, stateAbbr:
           `${cityName} residents care about where their items end up, and so do we. In ${stateName}, we work with local recycling facilities, donation centers, and resale partners to divert approximately 60% of all items from landfills. Items with resale value go through our resale network. Usable items below resale threshold get donated to ${stateAbbr} charities. Recyclable materials go to certified facilities.`,
           `${stateName} has ${profile.region === "pacific" || profile.region === "northeast" ? "some of the strictest environmental regulations in the country" : "growing environmental standards"}, and our disposal practices exceed every requirement. Electronics are recycled through certified e-waste processors. Appliance refrigerants are recovered per EPA standards. Mattresses go to mattress recyclers where available. We maintain disposal manifests for every job in ${cityName}.`,
           `Choosing We Pay You Junk Removal in ${cityName} isn't just better for your wallet — it's the most environmentally responsible junk removal choice you can make. Our resale-first model means your working refrigerator goes to a new home instead of a landfill. Your quality furniture gets a second life instead of being buried. Your electronics get properly recycled instead of leaching toxins. It's the right thing to do, and our business model makes it the profitable thing to do too.`,
+        ],
+      },
+    ],
+
+    // === ADDITIONAL SECTIONS FOR 10K TARGET ===
+
+    extraSections: [
+      {
+        heading: `The Industry Secret Every ${cityName} Resident Needs to Know`,
+        paragraphs: [
+          `Here is what every junk removal company in ${cityName} hopes you never discover: they charge you $300-$800 to haul your items away, then sort through everything at their facility and resell 35% or more of it for their own profit. Your working refrigerator, solid wood dining table, power tools, exercise equipment, and electronics get flipped for hundreds or thousands of dollars. You paid to give them free inventory. They made money twice — once from the fee you paid, and again from your items. This has been the standard model for 1-800-GOT-JUNK, Junk King, College Hunks, and every local hauler in ${cityName} for decades.`,
+          `We Pay You Junk Removal exists because this model is fundamentally unfair to ${cityName} residents. We charge a transparent hourly rate — $100/hr for a 1-person crew, $250/hr for a 2-person crew, or $200/person/hr for emergency same-day. You watch the clock, there is nothing to estimate or manipulate. We appraise your valuable items in front of you with real comparable sales data. And we credit you 50% (when applicable) of what they are worth. The same items that other ${cityName} companies profit from — we split the value with you. No trick, no fine print, no catch.`,
+          `The math always works in your favor in ${cityName}. Best case: credits exceed the bill and you get a check. Average case: you save 25-40% compared to flat-rate competitors. Worst case: zero valuable items, and our hourly rate is still competitive with volume pricing for the same load. There is literally no scenario where calling the other guys in ${cityName} saves you money.`,
+        ],
+      },
+      {
+        heading: `Complete Guide to Furniture Removal in ${cityName}`,
+        paragraphs: [
+          `Furniture removal is the most requested service in ${cityName}. Quality furniture from brands like Pottery Barn, Restoration Hardware, West Elm, Ethan Allen, and Crate & Barrel holds 30-60% of its retail value for years. That dining table you bought for $2,000? Still worth $600-$1,200 in good condition. That leather sofa? $200-$800 depending on brand and wear. Solid wood dressers, desks, bookshelves, and bed frames all have active buyers in the ${cityName} area.`,
+          `Mid-range furniture from Ashley, Rooms To Go, IKEA, and Wayfair has lower resale percentages (15-30%) but still meaningful value in good condition. An IKEA KALLAX unit brings $30-$60. An Ashley dining set might bring $100-$200. The key factors: material (solid wood dramatically outperforms particle board), brand recognition, and condition (light cosmetic wear reduces value by only 10-20%, while structural damage drops it significantly).`,
+          `With our service in ${cityName}, a 1-person crew picks up furniture in under an hour for $100. If that furniture has $200 in resale value, you get $100 credit — your net cost is zero, and we might pay you. Traditional furniture removal in ${cityName} costs $150-$300 per piece with zero return. The economics are not even close.`,
+        ],
+      },
+      {
+        heading: `Appliance Removal and Resale Value in ${cityName}`,
+        paragraphs: [
+          `Working appliances are among the most reliably valuable items we remove in ${cityName}. The demand for affordable used appliances is massive — landlords, property flippers, and budget-conscious buyers are always looking. Refrigerators less than 10 years old: $200-$600 depending on brand, size, and finish. Washer/dryer sets: $200-$500. Dishwashers: $75-$250. Ranges and ovens: $150-$400.`,
+          `Brand matters significantly in ${cityName}'s appliance resale market. Samsung, LG, and Whirlpool command the highest prices. Stainless steel finishes bring 20-30% more than white or black. French door refrigerators outsell top-freezer models by 2-3x. Front-load washers beat top-loaders. Our ${cityName} crews know these dynamics because they see hundreds of appliances every month.`,
+          `Non-working appliances still get removed as part of your hourly rate — they just do not generate credit. Even broken refrigerators and washers have scrap metal value that partially offsets disposal costs on our end. And for appliances containing refrigerants, we handle EPA-compliant refrigerant recovery as part of our standard service — no extra charge, no separate contractor needed.`,
+          `The bottom line for ${cityName} residents: if you are replacing an appliance, do not pay someone to haul the old one and dump it. Call us. If it works, you get credit. If it does not, we still haul it for the same hourly rate with dump fees included. Either way, you save money compared to any other option in ${cityName}.`,
+        ],
+      },
+      {
+        heading: `Estate Cleanout Guide for ${cityName} Families`,
+        paragraphs: [
+          `Estate cleanouts in ${cityName} are where our model delivers the most dramatic results for families. When a loved one passes or moves to assisted living, clearing the property means dealing with decades of belongings across every room, closet, drawer, and cabinet. Furniture sets, full kitchens of appliances, decades of accumulated tools, antiques, collectibles, artwork, musical instruments, clothing, personal items, and memories.`,
+          `Traditional junk companies in ${cityName} charge $2,000-$5,000+ for estate cleanouts and then resell the valuable items for their own profit. The family pays thousands and gets nothing back for Grandma's dining set, Grandpa's tool collection, or the working appliances. With our model, those same items generate 50% resale credit (when applicable) — and on large estates, the credits frequently exceed the total bill. We have handled estate cleanouts in the ${cityName} area where families received checks for $500-$2,000+ instead of bills.`,
+          `We approach estate work in ${cityName} with sensitivity and patience. Our crews understand the emotional weight of clearing a loved one's home. They work room by room, identify valuable items carefully, present every appraisal for the family's approval, and handle personal items with respect. If the family needs to stop and come back another day, no problem — we schedule the remaining work at the same rate.`,
+          `Pro tip for ${cityName} estate managers: remove jewelry, cash, legal documents, photos, and irreplaceable personal items before our crew arrives. These should go to a safe location off-site. Everything else — furniture, appliances, electronics, tools, household goods — our crew handles and appraises. Do not pre-sort or pre-dispose. Families who throw things away before we arrive often discard items worth hundreds of dollars without realizing it.`,
+        ],
+      },
+      {
+        heading: `${cityName} Commercial Junk Removal — Office, Retail, and Warehouse`,
+        paragraphs: [
+          `Businesses in ${cityName} have access to the same credit model as residential customers — and the savings are even more dramatic. Commercial furniture and equipment have the strongest resale markets of any category. Herman Miller Aeron chairs resell for $400-$700. Steelcase desks bring $100-$300. Standing desks, conference tables, commercial monitors, IT equipment, and commercial kitchen gear all have active secondary markets in the ${cityName} area.`,
+          `We have cleared offices in the ${cityName} metro where the resale credits from 30-50 task chairs alone exceeded the total removal cost. The business received a check instead of a bill. This is not an outlier — it is a pattern. Commercial furniture holds value because the demand for affordable used office equipment is enormous and growing. Remote work, co-working spaces, and budget-conscious startups in ${cityName} are all buying used commercial furniture.`,
+          `For ${cityName} businesses, we offer after-hours service (evenings and weekends at no extra charge), certificates of insurance on request, detailed disposal documentation for compliance, and recurring pickup scheduling. Whether you are closing an office, relocating, downsizing, or cycling furniture — we handle it with minimal disruption to your ${cityName} operations.`,
+        ],
+      },
+      {
+        heading: `Construction Debris and Renovation Waste in ${cityName}`,
+        paragraphs: [
+          `${cityName} contractors and DIY renovators have a better option than dumpster rental. Our crew loads and hauls construction debris at the hourly rate — drywall, lumber, concrete, tile, roofing, old cabinets, fixtures, flooring, and general jobsite waste. No weight limits, no overage fees, no dumpster blocking your ${cityName} driveway for a week.`,
+          `Dumpster rental in ${cityName} typically costs $300-$600 per week with strict weight limits that renovation debris exceeds on day one. Overage fees add $40-$100 per ton. Plus you still have to load it yourself. With our service, the crew does the loading. Your total cost for a typical bathroom demo cleanup: 1-2 hours at the hourly rate with dump fees included. Scrap metal from the project — copper pipe, old fixtures, steel — earns you credit that further reduces the bill.`,
+          `For ${cityName} contractors with ongoing projects, we schedule recurring pickups — every few days or once a week — so your jobsite stays clean without the logistical hassle of dumpster swaps. This is especially valuable for multi-unit builds, whole-house renovations, and commercial projects in ${cityName} where continuous debris generation requires regular hauling.`,
+        ],
+      },
+      {
+        heading: `${cityName} Junk Removal Pricing Comparison — Us vs. Every Other Option`,
+        paragraphs: [
+          `Let us compare every junk removal option available to ${cityName} residents: DIY (rent a truck, load yourself, drive to dump), dumpster rental, flat-rate junk company (1-800-GOT-JUNK, Junk King, etc.), and We Pay You Junk Removal. The numbers speak for themselves.`,
+          `DIY in ${cityName}: truck rental $50-$150 + dump fees $30-$100 + gas $10-$30 + your entire Saturday = $200-$500 total including time value. Zero resale credit because everything goes straight to the dump. Your working fridge, quality furniture, and tools — all landfilled.`,
+          `Dumpster rental in ${cityName}: $300-$600 per week + weight overage fees + possible permit. You load it yourself over days. Zero resale credit. Blocks your driveway. Neighbors complain. HOA sends a letter.`,
+          `Flat-rate company in ${cityName}: $300-$800 per truckload. They estimate the volume (you cannot verify it). They keep 100% of resale profit from your items. A $500 job where they sell $300 of your stuff costs them $200 net. You paid $500 and got nothing.`,
+          `We Pay You in ${cityName}: $100-$250/hr depending on crew size. Dump fees included. 50% resale credit (when applicable) on valuable items. A 2-hour job at $250/hr with $300 in resale credits = you pay $200. Same stuff, same volume, different model. Your savings: $100-$600 depending on the job. And on big cleanouts, you might walk away with a check.`,
+        ],
+      },
+      {
+        heading: `Property Management and Landlord Junk Removal in ${cityName}`,
+        paragraphs: [
+          `${cityName} landlords and property managers deal with junk removal on a recurring basis — every tenant turnover, every eviction, every foreclosure. Traditional haulers charge $300-$800 per unit and keep all resale value from items left behind. Over a year of turnovers, that adds up to thousands of dollars.`,
+          `Our model changes the economics for ${cityName} property managers. Items left behind by tenants — furniture, appliances, electronics, personal belongings — often have real resale value. A typical unit turnover in ${cityName} generates $100-$400 in resale credits, reducing per-unit cleanout costs by 30-50%. Over 15 turnovers per year, that is $1,500-$6,000 in annual savings compared to flat-rate haulers.`,
+          `We offer ${cityName} property managers recurring service with priority scheduling, consistent crew assignments (your crew learns your buildings and gets faster every visit), and streamlined invoicing. Same-day availability means you are not losing days of rent waiting for a hauling company to fit you in.`,
+        ],
+      },
+      {
+        heading: `How to Book Junk Removal in ${cityName}`,
+        paragraphs: [
+          `Booking junk removal in ${cityName} takes about 2 minutes. You have three options: book online through our booking page (fill out a quick form and we confirm within 30 minutes), call us at ${PHONE} (our scheduling team answers 7AM-8PM every day), or text us at the same number (send photos of what needs to go and we reply with a time estimate).`,
+          `Same-day service is available in ${cityName} for calls placed before noon. Our dispatch routes the nearest available crew — typical arrival is within 2-4 hours. We offer 2-hour arrival windows so you are not stuck waiting all day. Weekend and holiday appointments are available at the same rate — no surcharges ever.`,
+          `For large ${cityName} jobs — estate cleanouts, office clearing, warehouse work — we recommend booking 3-5 days ahead to ensure crew and truck availability. But even these can often be accommodated same-day or next-day depending on scheduling. Call us and we will find a way to get it done on your timeline.`,
+        ],
+      },
+      {
+        heading: `Safety, Insurance, and Professionalism in ${cityName}`,
+        paragraphs: [
+          `Every crew member who shows up at your ${cityName} property is background-checked, professionally trained, and covered by comprehensive liability insurance. We do not hire day laborers or subcontract to random trucks — our crews are our employees, trained in our methods, our safety protocols, and our customer service standards. They carry identification and arrive in branded vehicles.`,
+          `We use corner guards on doorframes, floor runners on hardwood and tile, and moving blankets to protect items during transport through tight ${cityName} spaces — narrow hallways in apartments, steep stairs in brownstones, tight turns in condos. If property damage occurs, our insurance covers the repair at no cost to you. We carry general liability, commercial auto, workers' compensation, and professional liability insurance in ${stateName}.`,
+          `Our ${cityName} crews communicate clearly throughout the job — what they are loading, what has value, what the appraisals look like, and when they expect to finish. At the end of every job, they do a walkthrough with you to confirm the space is clean and everything you wanted removed is gone. No surprises, no rushing out the door, no "good enough." The space is left cleaner than they found it.`,
         ],
       },
     ],
