@@ -57,7 +57,7 @@ export default function PricingPage() {
             ))}
           </div>
           <div className="mt-10 space-y-5 text-base leading-relaxed text-slate-700">
-            <p>starting at $100/hr means starting at $100/hr. Not $100 plus a fuel surcharge. Not $100 plus dump fees. Not $100 for the first hour then $150 after that. Not $100 base with a $50 &quot;heavy item fee&quot; when we pick up your fridge. Our crew pulls up, works the job, and the clock runs starting at $100/hr from the moment they start loading until they finish the walkthrough. If it takes 47 minutes, you pay the 1 hour minimum. If it takes 2 hours and 15 minutes, you pay $225. Simple.</p>
+            <p>Our pricing is straightforward. $100/hr for a 1-person crew. $250/hr for a 2-person crew. $200/person/hr for emergency same-day. Not $100 plus a fuel surcharge. Not $100 plus dump fees. Not $100 base with a $50 &quot;heavy item fee&quot; when we pick up your fridge. Our crew pulls up, works the job, and the clock runs at your hourly rate from the moment they start loading until they finish the walkthrough. If it takes 47 minutes, you pay the 1 hour minimum. If it takes 2 hours and 15 minutes with a 1-person crew, you pay $225. Simple.</p>
             <p>This is the opposite of how companies like 1-800-GOT-JUNK price things. They look at your stuff, estimate how much truck space it&apos;ll take, and quote you $200-$800. You have no way to verify their volume estimate — and they have every reason to round up. Our model? You watch the clock. There&apos;s nothing to estimate, nothing to dispute, nothing to game. Time is time.</p>
           </div>
         </div>
